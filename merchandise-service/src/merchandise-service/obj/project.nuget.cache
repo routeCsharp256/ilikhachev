@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "OUApSlxSl6s1G1rIhhNCTVQ0E3sB04JLwbiM+bPYY84zXugSv0yuuKn4yZZWsSFxRHcU/AR3YKeWmMU/LKkACg==",
+  "success": true,
+  "projectFilePath": "/Users/tiove/RiderProjects/merchandise-service/src/merchandise-service/merchandise-service.csproj",
+  "expectedPackageFiles": [
+    "/Users/tiove/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/tiove/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/tiove/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/tiove/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/tiove/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/tiove/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
