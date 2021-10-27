@@ -21,6 +21,10 @@ EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService", "src\OzonEdu.MerchandiseService\OzonEdu.MerchandiseService.csproj", "{4164D51C-B064-42D8-8553-E5E2B3305E1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.HttpModels", "src\OzonEdu.MerchandiseService.HttpModels\OzonEdu.MerchandiseService.HttpModels.csproj", "{E599FEAF-0062-402D-B68B-5EBC70095BC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchandiseService.Grpc", "src\OzonEdu.MerchandiseService.Grpc\OzonEdu.MerchandiseService.Grpc.csproj", "{4DB3535F-B907-48F9-BE79-357DC5AE9B7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,11 +32,21 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4164D51C-B064-42D8-8553-E5E2B3305E1B} = {C7C7916D-8972-4A33-A4E7-677879831F76}
+		{E599FEAF-0062-402D-B68B-5EBC70095BC1} = {C7C7916D-8972-4A33-A4E7-677879831F76}
+		{4DB3535F-B907-48F9-BE79-357DC5AE9B7D} = {C7C7916D-8972-4A33-A4E7-677879831F76}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4164D51C-B064-42D8-8553-E5E2B3305E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4164D51C-B064-42D8-8553-E5E2B3305E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4164D51C-B064-42D8-8553-E5E2B3305E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4164D51C-B064-42D8-8553-E5E2B3305E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E599FEAF-0062-402D-B68B-5EBC70095BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E599FEAF-0062-402D-B68B-5EBC70095BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E599FEAF-0062-402D-B68B-5EBC70095BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E599FEAF-0062-402D-B68B-5EBC70095BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB3535F-B907-48F9-BE79-357DC5AE9B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB3535F-B907-48F9-BE79-357DC5AE9B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB3535F-B907-48F9-BE79-357DC5AE9B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB3535F-B907-48F9-BE79-357DC5AE9B7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
