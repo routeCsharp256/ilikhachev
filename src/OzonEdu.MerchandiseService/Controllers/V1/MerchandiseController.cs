@@ -26,7 +26,7 @@ namespace OzonEdu.MerchandiseService.Controllers.V1
         }
         
         [HttpGet("merch/{id}")]
-        public async Task<ActionResult<GetAllResponse>> GetAll(Guid id, CancellationToken token)
+        public async Task<ActionResult<MerchResponse>> GetAll(Guid id, CancellationToken token)
         {
             return Ok(await _merchandiseService.GetMerchById(id, token));
         }

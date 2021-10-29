@@ -13,7 +13,7 @@ namespace OzonEdu.MerchandiseService.Services
             throw new NotImplementedException();
         }
 
-        public Task<GetAllResponse> GetMerchById(Guid id, CancellationToken token)
+        public Task<MerchResponse> GetMerchById(Guid id, CancellationToken token)
         {
             throw new NotImplementedException();
         }

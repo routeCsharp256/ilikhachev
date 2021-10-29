@@ -2,7 +2,7 @@ using System;
 
 namespace OzonEdu.MerchandiseService.HttpModels
 {
-    public class MerchDto
+    public class MerchResponse
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
