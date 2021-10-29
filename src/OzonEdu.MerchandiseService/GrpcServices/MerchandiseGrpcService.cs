@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Microsoft.AspNetCore.Connections;
 using OzonEdu.MerchandiseService.Grpc;
 using OzonEdu.MerchandiseService.Services.Interfaces;
 
@@ -26,7 +27,7 @@ namespace OzonEdu.MerchandiseService.GrpcServices
             {
                 if (context.CancellationToken.IsCancellationRequested)
                 {
-                    break;
+                    throw new ConnectionAbortedException("Aborted by cancellation token");
                 }
 
                 await responseStream.WriteAsync(new GetAllMerchResponse()

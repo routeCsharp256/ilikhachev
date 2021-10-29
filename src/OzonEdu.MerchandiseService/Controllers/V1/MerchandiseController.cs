@@ -19,10 +19,16 @@ namespace OzonEdu.MerchandiseService.Controllers.V1
             _merchandiseService = merchandiseService;
         }
         
-        [HttpGet("getAll")]
-        public async Task<ActionResult<GetAllResponse>> GetAll(CancellationToken token)
+        [HttpGet("merch")]
+        public async Task<ActionResult<GetAllResponse>> GetMerch(CancellationToken token)
         {
             return Ok(await _merchandiseService.GetAllMerch(token));
+        }
+        
+        [HttpGet("merch/{id}")]
+        public async Task<ActionResult<GetAllResponse>> GetAll(Guid id, CancellationToken token)
+        {
+            return Ok(await _merchandiseService.GetMerchById(id, token));
         }
 
         [HttpGet("getInfo")]

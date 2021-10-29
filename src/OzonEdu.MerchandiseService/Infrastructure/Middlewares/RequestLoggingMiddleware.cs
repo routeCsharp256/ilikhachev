@@ -21,64 +21,56 @@ namespace OzonEdu.MerchandiseService.Infrastructure.Middlewares
 
         public async Task InvokeAsync(HttpContext context)
         {
-            await LogRequest(context);
+            LogRequest(context);
 
             await _next(context);
 
-            await LogResponse(context);
+            LogResponse(context);
         }
 
-        private Task LogRequest(HttpContext context)
+        private void LogRequest(HttpContext context)
         {
             var a = context.Request.Protocol;
-            if (context.Request.ContentType == "application/grpc")
+            if (string.Equals(context.Response.ContentType,"application/grpc",
+                StringComparison.CurrentCultureIgnoreCase))
             {
-                return Task.CompletedTask;
+                return;
             }
             
             try
             {
                 context.Request.EnableBuffering();
-                
-                StringBuilder headers = new ();
-                headers.AppendJoin(", ", context.Request.Headers.Values);
-                
+
                 string fullRequestPath = context.Request.PathBase + context.Request.Path;
                 
                 _logger.LogInformation("Request logged");
-                _logger.LogInformation("Headers: {headers}", headers.ToString());
+                _logger.LogInformation("Headers: {headers}", context.Request.Headers);
                 _logger.LogInformation("Route: {route}", fullRequestPath);
             }
             catch (Exception e)
             {
                 _logger.LogError(e, "Could not log request body");
             }
-            
-            return Task.CompletedTask;
         }
 
-        private Task LogResponse(HttpContext context)
+        private void LogResponse(HttpContext context)
         {
-            if (context.Response.ContentType == "application/grpc")
+            if (string.Equals(context.Response.ContentType,"application/grpc",
+                StringComparison.CurrentCultureIgnoreCase))
             {
-                return Task.CompletedTask;
+                return;
             }
 
             var a = context.Request.Protocol;
             try
             {
-                StringBuilder headers = new ();
-                headers.AppendJoin(", ", context.Response.Headers.Values);
-                
                 _logger.LogInformation("Response logged");
-                _logger.LogInformation("Headers: {headers}", headers.ToString());
+                _logger.LogInformation("Headers: {headers}", context.Response.Headers);
             }
             catch (Exception e)
             {
                 _logger.LogError(e, "Could not log response body");
             }
-            
-            return Task.CompletedTask;
         }
     }
 }

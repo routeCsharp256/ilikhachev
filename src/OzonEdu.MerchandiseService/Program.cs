@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -19,9 +20,11 @@ namespace OzonEdu.MerchandiseService
                 {
                     if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                     {
+                        int.TryParse(Environment.GetEnvironmentVariable("OZON_EDU_GRPC_PORT"), out int port);
+                        
                         webBuilder.ConfigureKestrel(options =>
                         {
-                            options.ListenLocalhost(8000,
+                            options.ListenLocalhost(port,
                                 o =>
                                     o.Protocols = HttpProtocols.Http2);
                         });
