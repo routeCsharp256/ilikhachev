@@ -17,7 +17,9 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
 
 WORKDIR /app
 
-EXPOSE 80
+ARG APP_PORT
+ENV APP_PORT $APP_PORT
+EXPOSE $APP_PORT
 
 FROM runtime AS final
 WORKDIR /app

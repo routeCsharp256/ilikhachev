@@ -24,5 +24,7 @@ services:
   merchandise-service:
     image: 'merchandise-service'
     hostname: merchandise-service
+    environment:
+      - APP_PORT=$APP_PORT
     ports:
-      - "8089:80"
+      - "${APP_PORT}:80"

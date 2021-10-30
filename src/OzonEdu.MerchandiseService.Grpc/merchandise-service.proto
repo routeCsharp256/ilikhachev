@@ -1,0 +1,24 @@
+syntax = "proto3";
+option csharp_namespace = "OzonEdu.MerchandiseService.Grpc";
+package MerchandiseService;
+
+import "google/protobuf/empty.proto";
+
+service MerchandiseServiceGrpc {
+  rpc GetAll (google.protobuf.Empty) returns (stream GetAllMerchResponse);
+  rpc GetInfo (MerchInfoRequest) returns (MerchInfoResponse);
+}
+
+message GetAllMerchResponse {
+  string id = 1;
+  string name = 2;
+}
+
+message MerchInfoRequest {
+  string id = 1;
+}
+
+message MerchInfoResponse {
+  string name = 1;
+  string description = 2;
+}

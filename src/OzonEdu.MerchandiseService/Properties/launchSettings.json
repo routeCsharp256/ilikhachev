@@ -7,7 +7,9 @@
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:8001;http://localhost:8000",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "OZON_EDU_GRPC_PORT ": "8002",
+        "OZON_EDU_HTTP_PORT": "8000"
       }
     }
   }
