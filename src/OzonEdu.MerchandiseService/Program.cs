@@ -18,18 +18,6 @@ namespace OzonEdu.MerchandiseService
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                    {
-                        int.TryParse(Environment.GetEnvironmentVariable("OZON_EDU_GRPC_PORT"), out int port);
-                        
-                        webBuilder.ConfigureKestrel(options =>
-                        {
-                            options.ListenLocalhost(port,
-                                o =>
-                                    o.Protocols = HttpProtocols.Http2);
-                        });
-                    }
-
                     webBuilder.UseStartup<Startup>();
                 })
                 .AddInfrastructure()
