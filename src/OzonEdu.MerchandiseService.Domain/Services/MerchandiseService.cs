@@ -1,10 +1,10 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using OzonEdu.MerchandiseService.Domain.Services.Interfaces;
 using OzonEdu.MerchandiseService.HttpModels;
-using OzonEdu.MerchandiseService.Services.Interfaces;
 
-namespace OzonEdu.MerchandiseService.Services
+namespace OzonEdu.MerchandiseService.Domain.Services
 {
     public class MerchandiseService : IMerchandiseService
     {

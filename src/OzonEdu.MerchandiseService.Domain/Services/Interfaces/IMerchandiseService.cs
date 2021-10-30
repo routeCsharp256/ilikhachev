@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using OzonEdu.MerchandiseService.HttpModels;
 
-namespace OzonEdu.MerchandiseService.Services.Interfaces
+namespace OzonEdu.MerchandiseService.Domain.Services.Interfaces
 {
     public interface IMerchandiseService
     {

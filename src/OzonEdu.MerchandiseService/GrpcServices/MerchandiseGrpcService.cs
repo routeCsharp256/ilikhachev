@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Microsoft.AspNetCore.Connections;
+using OzonEdu.MerchandiseService.Domain.Services.Interfaces;
 using OzonEdu.MerchandiseService.Grpc;
-using OzonEdu.MerchandiseService.Services.Interfaces;
 
 namespace OzonEdu.MerchandiseService.GrpcServices
 {
