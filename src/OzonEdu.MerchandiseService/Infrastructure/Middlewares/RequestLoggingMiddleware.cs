@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -30,7 +29,6 @@ namespace OzonEdu.MerchandiseService.Infrastructure.Middlewares
 
         private void LogRequest(HttpContext context)
         {
-            var a = context.Request.Protocol;
             if (string.Equals(context.Response.ContentType,"application/grpc",
                 StringComparison.CurrentCultureIgnoreCase))
             {
@@ -61,7 +59,6 @@ namespace OzonEdu.MerchandiseService.Infrastructure.Middlewares
                 return;
             }
 
-            var a = context.Request.Protocol;
             try
             {
                 _logger.LogInformation("Response logged");
